@@ -1,0 +1,11 @@
+ASMTAX
+
+1). App Purpose
+	Provide the user with an interactive mapping application that lets them discover information (mining tax regime) by clicking on a particular country.  Part of the application will contain a “map editor” section that will allow admin to log in and perform CRUD operations on the data.
+
+2). Feature Set
+	1) Click on map and present data to the user.  This functionality will come from a javascript mapping library called AMCHARTS (http://www.amcharts.com/javascript-maps/).
+	
+	2) Login section for admin.
+	
+	3)  Map Editor section for admin.  This is where admin will manage the data.
