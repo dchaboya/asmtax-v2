@@ -1,0 +1,25 @@
+{
+  "name": "asmtax",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dchaboya/asmtax-v2",
+  "authors": [
+    "Daniel Chaboya <daniel.chavolla@gmail.com>"
+  ],
+  "description": "asmtax.org app",
+  "main": "index.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "amcharts": "~3.11.3",
+    "ammap": "~3.10.0"
+  }
+}

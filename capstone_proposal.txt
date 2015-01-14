@@ -9,3 +9,22 @@ ASMTAX
 	2) Login section for admin.
 	
 	3)  Map Editor section for admin.  This is where admin will manage the data.
+
+Browserify
+/server
+/client
+/client/index.js
+var map = require('./map');
+/client/map.js
+module.exports = function(parameters) {
+amcharts.load(data):
+--
+npm install --save-dev browserify
+$ browserify
+$ node_modules/.bin/browserify
+package.json
+"scripts"
+"build": "browserify --standalone myapp -o bundle.js client/index.js"
+npm run build
+browserify ... | uglifyjs
+watchify

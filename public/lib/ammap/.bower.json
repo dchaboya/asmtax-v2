@@ -1,0 +1,17 @@
+{
+  "name": "ammap",
+  "version": "3.10.0",
+  "main": "./dist/ammap/ammap.js",
+  "dependencies": {},
+  "homepage": "https://github.com/MattMSumner/bower-ammap",
+  "_release": "3.10.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.10.0",
+    "commit": "51534fa6673567fca89a54b74850de8bf9922c47"
+  },
+  "_source": "git://github.com/MattMSumner/bower-ammap.git",
+  "_target": "~3.10.0",
+  "_originalSource": "ammap",
+  "_direct": true
+}
