@@ -1,1 +1,0 @@
-var AmCharts = require('ammapjs');

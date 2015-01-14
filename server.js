@@ -1,18 +1,14 @@
-var AmCharts = require('ammap');
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var port = process.env.PORT || 3000;
+// var mongoose = require('./config/mongoose');
+var express = require('./config/express');
+// var express = require('./config/passport');
 
-var map = AmCharts.makeChart("chartdiv", {
+var app = express();
 
-  "type": "map",
-    "theme": "none",
-    "pathToImages": "http://www.amcharts.com/lib/3/images/",
 
-  "dataProvider": {
-     "map": "worldLow",
-    "getAreasFromMap": true
-  },
-  "areasSettings": {
-    "autoZoom": true,
-    "selectedColor": "#CC0000"
-  },
-  "smallMap": {}
+app.listen(port, function() {
+  console.log('lising on port' + port);
 });
+
+module.exports = app;
