@@ -4,6 +4,7 @@
   "description": "asmtax.org app",
   "main": "server.js",
   "scripts": {
+    "build": "browserify . -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
