@@ -26,11 +26,8 @@
     "ammap": {"exports": "AmCharts"}
   },
   "homepage": "https://github.com/dchaboya/asmtax-v2",
-  "devDependencies": {
-    "browserify": "^8.1.0",
-    "browserify-shim": "^3.8.2"
-  },
   "dependencies": {
+    "browserify": "^8.1.0",
     "browserify-shim": "^3.8.2"
   }
 }
