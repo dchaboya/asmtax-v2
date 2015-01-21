@@ -9,7 +9,8 @@ var flash = require('connect-flash');
 var passport = require('passport');
 
 module.exports = function() {
-
+  
+  //initialize express app
   var app = express();
 
   if(process.env.NODE_ENV === 'development') {
