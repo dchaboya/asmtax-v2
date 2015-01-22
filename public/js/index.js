@@ -1,4 +1,5 @@
 var AmCharts = require('ammap');
+AmCharts.maps.worldLow = require('./worldLow.proxy');
 
 var map = AmCharts.makeChart("chartdiv", {
 
@@ -13,6 +14,5 @@ var map = AmCharts.makeChart("chartdiv", {
   "areasSettings": {
     "autoZoom": true,
     "selectedColor": "#CC0000"
-  },
-  "smallMap": {}
+  }
 });
