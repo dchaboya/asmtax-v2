@@ -4,12 +4,42 @@
     <title><%= title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,700,600,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/css/styles.css"/>
   </head>
   <body>
-    <p>ASMTAX.ORG</p>
-    <div><%- include ../partials/map %></div>
+    <!-- <div class="wrapper container-fluid"> -->
+      <!-- navigation -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <!-- Logo and toggle functionality for navbar -->
+          <div class="navbar-header">
+            <button type="button" id="toggle-btn" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="logo navbar-brand">ASMTAX.ORG</a>
+          </div>
+          <!-- Collection of links and content for toggling -->
+          <div id="navbarCollapse" class="text-center collapse navbar-collapse">
+            <ul class="nav-links nav navbar-nav navbar-right">
+              <li><a  href="/about">About</a></li>
+              <li><a href="/help">Help</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- map -->
+      <%- include ../partials/map %>
+      <!-- footer -->
+      
+    <!-- </div> -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>
