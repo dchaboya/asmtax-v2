@@ -1,4 +1,3 @@
-process.env.PWD = process.cwd();
 
 var config = require('./config');
 var express = require('express');
@@ -9,6 +8,7 @@ var methodOverride = require('method-override');
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
+var path = require('path');
 
 module.exports = function() {
   
@@ -43,7 +43,7 @@ module.exports = function() {
   require('../app/routes/index.server.routes.js')(app);
   require('../app/routes/about.server.routes.js')(app);
 
-  app.use(express.static(process.env.PWD + '/public'));
+  app.use(express.static(path.resolve('./public')));
 
   return app;
 
