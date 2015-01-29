@@ -1,3 +1,5 @@
+process.env.PWD = process.cwd();
+
 var config = require('./config');
 var express = require('express');
 var morgan = require('morgan');
@@ -39,8 +41,9 @@ module.exports = function() {
   // passport.session
 
   require('../app/routes/index.server.routes.js')(app);
+  require('../app/routes/about.server.routes.js')(app);
 
-  app.use(express.static('./public'));
+  app.use(express.static(process.env.PWD + './public'));
 
   return app;
 
