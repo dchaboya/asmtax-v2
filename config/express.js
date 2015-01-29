@@ -1,4 +1,5 @@
 process.env.PWD = process.cwd();
+
 var config = require('./config');
 var express = require('express');
 var morgan = require('morgan');
@@ -32,7 +33,7 @@ module.exports = function() {
     secret: config.sessionSecret
   }));
 
-  app.set('views', './app/views');
+  app.set('views', path.join(__dirname,'../app/views'));
   app.set('view engine', 'ejs');
 
   //include ...
@@ -43,13 +44,7 @@ module.exports = function() {
   require('../app/routes/index.server.routes.js')(app);
   require('../app/routes/about.server.routes.js')(app);
 
-  app.use(express.static(path.join(process.env.PWD, 'public')));
-
-  var mes = function() {
-    console.log(require('fs').existsSync(process.env.PWD + '/public'));
-};
-
-mes();
+  app.use(express.static(path.join(__dirname, '../public')));
 
   return app;
 
