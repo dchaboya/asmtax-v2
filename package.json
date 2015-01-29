@@ -3,9 +3,24 @@
   "version": "1.0.0",
   "description": "asmtax.org app",
   "main": "server.js",
+  "engines": {
+    "node": "0.10.35",
+    "npm": "1.4.28"
+  },
   "scripts": {
-    "build": "browserify . -o bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean-css": "type css1.css public/lib/bootstrap/dist/css/bootstrap.css | cleancss -o css3.css",
+    "build": "npm run build-js -s && npm run build-css -s",
+    "build-js": "watchify public/js/index.js -o public/js/app.js",
+    "build-css": "lessc public/css/styles.less public/dist/css/styles.css",
+    "watch": "parallelshell \"npm run build-js\" \"npm run watch-less -s\" \"npm run watch-test -s\"",
+    "watch-less": "nodemon --watch public/css/*.less --ext less --exec npm run build-css",
+    "watch-build": "nodemon -q -w public/ --ext '.' --exec 'npm run build'",
+    "watch-server": "nodemon",
+    "watch-test": "mocha -w -u tdd -R spec tests",
+    "open-dev": "opener http://localhost:3000",
+    "serve": "node server",
+    "live-reload": "live-reload --port 3000",
+    "dev": "npm run open-dev -s & parallelshell \"npm run watch-server -s\" \"npm run watch -s\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +32,7 @@
     "url": "https://github.com/dchaboya/asmtax-v2/issues"
   },
   "browser": {
+    "./server.js": "./public/js/index.js",
     "ammap": "./public/lib/ammap/dist/ammap/ammap.js",
     "ammapWorld": "./public/lib/ammap/dist/ammap/maps/js/worldLow.js"
   },
@@ -32,7 +48,39 @@
   },
   "homepage": "https://github.com/dchaboya/asmtax-v2",
   "dependencies": {
+    "body-parser": "^1.8.0",
     "browserify": "^8.1.0",
-    "browserify-shim": "^3.8.2"
+    "browserify-shim": "^3.8.2",
+    "compression": "^1.0.11",
+    "connect-flash": "^0.1.1",
+    "ejs": "^1.0.0",
+    "express": "^4.10.6",
+    "express-session": "^1.7.6",
+    "grunt": "^0.4.5",
+    "less": "^2.2.0",
+    "method-override": "^2.2.0",
+    "mongoose": "^3.8.15",
+    "morgan": "^1.3.0",
+    "passport": "^0.2.1",
+    "passport-google-oauth": "^0.1.5",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "clean-css": "^3.0.7",
+    "grunt-browserify": "^3.3.0",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.12.6",
+    "grunt-nodemon": "^0.3.0",
+    "live-reload": "^0.2.0",
+    "mocha": "^2.1.0",
+    "nodemon": "^1.3.2",
+    "opener": "^1.4.0",
+    "parallelshell": "^1.0.3",
+    "should": "^4.6.1",
+    "supertest": "^0.15.0",
+    "watchify": "^2.2.1"
   }
 }
