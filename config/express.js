@@ -33,7 +33,7 @@ module.exports = function() {
     secret: config.sessionSecret
   }));
 
-  app.set('views', path.join(__dirname,'../app/views'));
+  app.set('views', path.join(process.env.PWD, 'app/views'));
   app.set('view engine', 'ejs');
 
   //include ...
@@ -44,7 +44,7 @@ module.exports = function() {
   require('../app/routes/index.server.routes.js')(app);
   require('../app/routes/about.server.routes.js')(app);
 
-  app.use(express.static(path.join(__dirname, '../public')));
+  app.use(express.static(path.join(process.env.PWD, 'public')));
 
   return app;
 
