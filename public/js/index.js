@@ -1,6 +1,7 @@
 var AmCharts = require('ammap');
 AmCharts.maps.worldLow = require('./worldLow.proxy');
 
+//map
 var map = AmCharts.makeChart("chartdiv", {
 
   "type": "map",

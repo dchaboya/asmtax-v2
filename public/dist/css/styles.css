@@ -1,0 +1,69 @@
+body,
+html {
+  height: 100%;
+}
+.wrapper {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+.navbar {
+  background-color: #f15725;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  border: 0px transparent;
+}
+.navbar .navbar-header a {
+  color: #ffffff;
+}
+.navbar .nav-links li a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #f9bf3b;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 15px;
+  margin-left: 15px;
+  -o-transition: .7s;
+  -ms-transition: .7s;
+  -moz-transition: .7s;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+.navbar .nav-links li a:hover {
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.main {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+.footer {
+  height: 30px;
+  background-color: #ecf0f5;
+}
+.main-list {
+  background-color: #ecf0f5;
+  height: 100%;
+}
+#chartdiv {
+  height: 100%;
+}
+.logo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 27px;
+}
