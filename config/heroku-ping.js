@@ -7,6 +7,7 @@ var pingDate = Date.now();
 
 exports.pingApp = function() {
   setInterval(function() {
+    //change url once in production
     http.get('http://enigmatic-garden-6382.herokuapp.com');
   }, 300000);
 };
