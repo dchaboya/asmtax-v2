@@ -10,19 +10,21 @@ html,
   height: 100%;
 }
 .navbar {
-  background-color: #f15725;
+  background-color: #a93d1a;
   border-radius: 0px;
   margin-bottom: 0px;
   border: 0px transparent;
 }
 .navbar .navbar-header a {
-  color: #ffffff;
+  color: #d49e8c;
+  font-size: 1.312em;
+  font-weight: 900;
 }
 .navbar .nav-links li a {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #f9bf3b;
+  color: #404041;
   padding-bottom: 5px;
   padding-left: 0px;
   padding-right: 0px;
@@ -83,18 +85,16 @@ html,
   height: 65px;
 }
 .footer .container-fluid,
-.footer .row {
-  height: 100%;
-}
+.footer .row,
 .footer .footer-logo,
 .footer .footer-info {
   height: 100%;
 }
-.footer .footer-info {
-  background-color: #c0392b;
+.footer .footer-info,
+.footer .footer-logo {
+  background-color: #a93d1a;
 }
 .footer .vertical-align .footer-logo {
-  background-color: #f15725;
   justify-content: left;
 }
 .footer a {
@@ -114,7 +114,7 @@ html,
 /* Large desktops and laptops */
 @media (max-width: 480px) {
   .footer .vertical-align .footer-logo {
-    background-color: #f15725;
+    background-color: #a93d1a;
     justify-content: center;
   }
   .vertical-align > [class^="col-"],

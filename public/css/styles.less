@@ -1,11 +1,13 @@
 //colors
 @base: #ecf0f5;
 @white: #fff;
-@red: #f15725;
+@red: #a93d1a; //#f15725
+@light-red: #d49e8c;
 @carrot: #e67e22;
 @orange: #f39c12;
 @sandstorm: #f9bf3b;
 @rose: #c0392b;
+@Lynch: #404041;
 
 //fonts
 @lato: 'Lato', sans-serif;
@@ -30,14 +32,16 @@ body, html, .main {
   border: 0px transparent;
 
   .navbar-header a {
-    color: @white;
+    color: @light-red;
+    font-size: 1.312em; //21px / 16px
+    font-weight: 900;
   }
 
   .nav-links li a {
     font-family: @lato;
     font-weight: 400;
     font-size: 18px;
-    color: @sandstorm;
+    color: @Lynch;
     padding-bottom: 5px;
     padding-left: 0px;
     padding-right: 0px;
@@ -108,21 +112,17 @@ float: none;
 .footer {
   height: 65px; 
   
-  .container-fluid, .row {
-    height: 100%;
-  }
-
+  .container-fluid, .row,
   .footer-logo, .footer-info {
     height: 100%;
   }
 
-  .footer-info {
-    background-color: @rose;
+  .footer-info, .footer-logo {
+    background-color: @red;
   }
 
   .vertical-align {
     .footer-logo {
-      background-color: @red;
       justify-content: left;
     }
   }
