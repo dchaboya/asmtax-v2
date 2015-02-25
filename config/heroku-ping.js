@@ -3,7 +3,6 @@
 
 var http = require('http');
 var fs = require('fs');
-var pingDate = Date.now();
 
 exports.pingApp = function() {
   setInterval(function() {
