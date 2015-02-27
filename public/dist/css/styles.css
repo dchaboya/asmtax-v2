@@ -15,17 +15,12 @@ html,
   margin-bottom: 0px;
   border: 0px transparent;
 }
-.navbar .navbar-header a {
-  color: #d49e8c;
-  font-size: 1.312em;
-  font-weight: 900;
-}
 .navbar .nav-links li a {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  color: #404041;
-  padding-bottom: 5px;
+  font-size: 1em;
+  color: #ffffff;
+  padding-bottom: 3px;
   padding-left: 0px;
   padding-right: 0px;
   margin-right: 15px;
@@ -38,6 +33,39 @@ html,
 }
 .navbar .nav-links li a:hover {
   border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+}
+.navbar .navbar-brand {
+  float: none;
+}
+.navbar .navbar-brand a {
+  font-family: 'Lato', sans-serif;
+  color: #d49e8c;
+  font-size: 1.187em;
+  font-weight: 900;
+}
+.navbar-center {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin: auto;
+  height: 100%;
+}
+.dropdown-toggle {
+  z-index: 99;
+}
+.navbar-toggle {
+  z-index: 99999;
+}
+.map-toggle {
+  background-color: #d9534f;
+  border: none;
+  color: #ffffff;
+}
+.map-toggle:hover {
+  background-color: #d2322d;
   color: #ffffff;
 }
 .navbar-default .navbar-toggle {
