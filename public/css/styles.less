@@ -86,13 +86,15 @@ body, html, .main {
   z-index: 99999;
 }
 
-.map-toggle {
+.navbar-header .btn-group .btn {
   background-color: @medium-red;
   border: none;
   color: @white;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.map-toggle:hover {
+.navbar-header .btn-group .btn:hover {
   background-color: @dark-red;
   color: @white;
 }
@@ -109,6 +111,12 @@ body, html, .main {
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: @white;
+}
+
+.country-button .dropdown-menu {
+  height: auto;
+  max-height: 300px;
+  overflow-x: hidden;
 }
 
 .main {
