@@ -1,3 +1,4 @@
+var popupOverlay = require('jquery-popup-overlay');
 var AmCharts = require('ammap');
 AmCharts.maps.worldLow = require('./worldLow.proxy');
 
@@ -17,3 +18,14 @@ var map = AmCharts.makeChart("chartdiv", {
     "selectedColor": "#CC0000"
   }
 });
+
+$(document).ready(function() {
+
+      // Initialize the plugin
+      $('#data_popup').popup({
+        transition: 'all 0.3s',
+        color: '#fff',
+        opacity: 0.9
+      });
+
+    });
