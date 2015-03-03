@@ -33,8 +33,8 @@
         <div class="btn-group country-button">    
           <a href="#" class="country-toggle btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-th-list"></i> <span class="hidden-xs">Country Info</span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">GDP Map</a></li>
-            <li><a href="#">GDP Map</a></li>
+            <li class="data_popup_open"><a href="#">GDP Map</a></li>
+            <li class="data_popup_open"><a href="#">GDP Map</a></li>
             <li><a href="#">GDP Map</a></li>
             <li><a href="#">GDP Map</a></li>
             <li><a href="#">GDP Map</a></li>
@@ -80,6 +80,8 @@
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
+      <!-- popup -->
+      <%- include ../partials/popup %>
       <!-- map -->
       <%- include ../partials/map %>
       <!-- footer -->
