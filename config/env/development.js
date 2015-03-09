@@ -1,4 +1,4 @@
 module.exports = {
-  db:'mongodb://asmtax:rio1001@ds031741.mongolab.com:31741/asmtax',
+  db:'mongodb://asmtax-dev:rio1001@ds029197.mongolab.com:29197/asmtax-dev',
   sessionSecret: 'developmentSessionSecret'
 };
