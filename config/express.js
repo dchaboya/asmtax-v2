@@ -43,6 +43,7 @@ module.exports = function() {
 
   require('../app/routes/index.server.routes.js')(app);
   require('../app/routes/about.server.routes.js')(app);
+  require('../app/routes/mapitems.server.routes.js')(app);
 
   app.use(express.static(path.join(process.env.PWD, 'public')));
 
