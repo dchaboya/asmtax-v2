@@ -1,6 +1,6 @@
-var mapitems = require('../../app/controllers/mapitems.server.controller');
+var MapItem = require('../../app/controllers/mapitems.server.controller');
 
 module.exports = function(app) {
   app.route('/api/mapitems') 
-    .get(mapitems.list);
+    .get(MapItem.list);
 };
