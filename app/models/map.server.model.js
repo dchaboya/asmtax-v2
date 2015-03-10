@@ -24,10 +24,8 @@ var MapItemSchema = new Schema({
     type: String,
     default: '',
   },
-  source: [{
-    link: String
-  }],
-  img: {
+  source: [String],
+  flagImg: {
     type: String,
     default: '',
   }

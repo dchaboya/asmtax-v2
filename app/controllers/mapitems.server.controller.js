@@ -12,7 +12,8 @@ var getErrorMessage = function(err) {
 };
 
 exports.list = function(req, res) {
-
+  var maps = MapItem.find();
+  console.log(maps);
   MapItem.find().exec(function(err, mapitems) {
     if(err) {
       return rest.status(400).send({
@@ -20,6 +21,7 @@ exports.list = function(req, res) {
       });
     } else {
       res.json(mapitems);
+      console.log(MapItem);
     }
   });
 };
