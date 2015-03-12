@@ -1,31 +1,43 @@
-var popupOverlay = require('jquery-popup-overlay');
-var AmCharts = require('ammap');
-AmCharts.maps.worldLow = require('./worldLow.proxy');
+var app = angular.module('app', ['ngResource']);
 
-//map
-var map = AmCharts.makeChart("chartdiv", {
+app.service('MapDataService', ['$http', function($http){
+  
+  this.promise = {};
 
-  "type": "map",
-    "theme": "none",
-    "pathToImages": "http://www.amcharts.com/lib/3/images/",
+  this.initCountries = function () {
+    this.promise = $http.get('/api/mapitems');
+  };
 
-  "dataProvider": {
-     "map": "worldLow",
-    "getAreasFromMap": true
-  },
-  "areasSettings": {
-    "autoZoom": true,
-    "selectedColor": "#CC0000"
-  }
-});
+  this.getCountries = function() {
+    return this.promise;
+  };
 
-$(document).ready(function() {
+}]);
 
-      // Initialize the plugin
-      $('#data_popup').popup({
-        transition: 'all 0.3s',
-        color: '#fff',
-        opacity: 0.9
-      });
+app.controller('MapDataCtrl', ['$scope', 'MapDataService', function($scope, MapDataService) {
+  MapDataService.initCountries();
+  MapDataService.getCountries().then(function(result) {
+    $scope.countryNames = result.data;
+    console.log($scope.countryNames);
+  });
+}]);
 
-    });
+app.controller('MapCtrl', ['$scope', function($scope) {
+
+  $scope.map = AmCharts.makeChart("chartdiv", {
+    "type": "map",
+      "theme": "none",
+      "pathToImages": "http://www.amcharts.com/lib/3/images/",
+
+    "dataProvider": {
+       "map": "worldLow",
+      "getAreasFromMap": true
+    },
+    "areasSettings": {
+      "autoZoom": true,
+      "selectedColor": "#CC0000"
+    }
+  });
+
+}]);
+  
