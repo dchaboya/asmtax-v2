@@ -1,12 +1,5 @@
 body,
-html,
-.main {
-  height: 100%;
-  color: #ffffff;
-}
-.wrapper {
-  padding: 0px;
-  margin: 0px;
+html {
   height: 100%;
 }
 .navbar {
@@ -85,12 +78,10 @@ html,
   max-height: 300px;
   overflow-x: hidden;
 }
-.main {
-  display: table;
+.map-container {
+  height: 100%;
   width: 100%;
-  margin-top: -50px;
-  padding: 50px 0 0 0;
-  /*set left/right padding according to needs*/
+  display: table;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -98,53 +89,11 @@ html,
   height: 100%;
   display: table-row;
 }
-.col-md-2.no-float,
-.col-md-10.no-float {
+.map.no-float {
   float: none;
 }
-.main-list {
-  background-color: #ecf0f5;
+.map {
   display: table-cell;
-}
-#chartdiv {
-  height: 100%;
-  display: table-cell;
-  float: none;
-}
-.logo {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 27px;
-}
-.footer {
-  height: 65px;
-}
-.footer .container-fluid,
-.footer .row,
-.footer .footer-logo,
-.footer .footer-info {
-  height: 100%;
-}
-.footer .footer-info,
-.footer .footer-logo {
-  background-color: #a93d1a;
-}
-.footer .vertical-align .footer-logo {
-  justify-content: left;
-}
-.footer a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.86em;
-}
-.vertical-align {
-  flex-direction: row;
-}
-.vertical-align > [class^="col-"],
-.vertical-align > [class*=" col-"] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 /* Large desktops and laptops */
 @media (max-width: 480px) {

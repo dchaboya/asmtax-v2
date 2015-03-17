@@ -17,14 +17,7 @@
 @opensans: 'Open Sans', sans-serif;
 @roboto: 'Roboto', sans-serif;
 
-body, html, .main {
-  height: 100%;
-  color: @white;
-}
-
-.wrapper {
-  padding: 0px;
-  margin: 0px;
+body, html, {
   height: 100%;
 }
 
@@ -119,11 +112,12 @@ body, html, .main {
   overflow-x: hidden;
 }
 
-.main {
-  display:table;
+.map-container {
+  height: 100%;
   width: 100%;
-  margin-top: -50px;
-  padding: 50px 0 0 0; /*set left/right padding according to needs*/
+  display: table;
+  // margin-top: -50px;
+  // padding: 50px 0 0 0;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -133,65 +127,87 @@ body, html, .main {
   display: table-row;
 }
 
-.col-md-2.no-float, .col-md-10.no-float {
+.map.no-float {
   float: none;
 }
 
-.main-list {
-  background-color: @base;
+.map {
   display: table-cell;
 }
+// .main {
+//   display:table;
+//   width: 100%;
+//   margin-top: -50px;
+//   padding: 50px 0 0 0; /*set left/right padding according to needs*/
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
 
-#chartdiv {
-height: 100%;
-display: table-cell;
-float: none;
-} 
+// .col-md-2.no-float, .col-md-10.no-float {
+//   float: none;
+// }
 
-.logo {
-  font-family: @lato;
-  font-weight: 400;
-  font-size: 27px;
-}
+// .main-list {
+//   background-color: @base;
+//   display: table-cell;
+// }
 
-.footer {
-  height: 65px; 
+// .main-row > #chartdiv {
+//   display: table-cell;
+//   height: 100%;
+//   width: 100%;
+//   border: 1px solid black;
+// }
+// #chartdiv {
+// height: 100%;
+// display: table-cell;
+// float: none;
+// } 
+
+// .logo {
+//   font-family: @lato;
+//   font-weight: 400;
+//   font-size: 27px;
+// }
+
+// .footer {
+//   height: 65px; 
   
-  .container-fluid, .row,
-  .footer-logo, .footer-info {
-    height: 100%;
-  }
+//   .container-fluid, .row,
+//   .footer-logo, .footer-info {
+//     height: 100%;
+//   }
 
-  .footer-info, .footer-logo {
-    background-color: @red;
-  }
+//   .footer-info, .footer-logo {
+//     background-color: @red;
+//   }
 
-  .vertical-align {
-    .footer-logo {
-      justify-content: left;
-    }
-  }
+//   .vertical-align {
+//     .footer-logo {
+//       justify-content: left;
+//     }
+//   }
 
-  a {
-    color: @white;
-    text-decoration: none;
-    font-size: 1.86em;
-  }
-}
+//   a {
+//     color: @white;
+//     text-decoration: none;
+//     font-size: 1.86em;
+//   }
+// }
 
 
-//Used for centering content inside a bootstrap col
- .vertical-align {
-  // display: flex;
-  flex-direction: row;
-}
+// //Used for centering content inside a bootstrap col
+//  .vertical-align {
+//   // display: flex;
+//   flex-direction: row;
+// }
 
-.vertical-align > [class^="col-"],
-.vertical-align > [class*=" col-"] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .vertical-align > [class^="col-"],
+// .vertical-align > [class*=" col-"] {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
 /// Media Queries ///
 

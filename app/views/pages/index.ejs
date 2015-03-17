@@ -12,51 +12,13 @@
     <link rel="stylesheet" href="dist/css/styles.css"/>
   </head>
   <body class="ng-cloak">
-    <!-- <div class="wrapper container-fluid"> -->
-    <!-- navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        &nbsp;
-        <div class="btn-group map-button">    
-          <a href="#" class="map-toggle btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-map-marker"></i> <span class="hidden-xs">Maps</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">GDP Map</a></li>
-          </ul> 
-        </div>
-        <div class="btn-group country-button">    
-          <a href="#" class="country-toggle btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-th-list"></i> <span class="hidden-xs">Country Data</span></a>
-          <ul class="dropdown-menu" ng-controller="MapDataCtrl">
-            <li ng-repeat="country in countryNames">
-              <a href="#">{{country.country}}</a>
-            </li>
-          </ul> 
-        </div>  
-      </div>
-    <div class="navbar-center navbar-brand" href="#">
-      <a class="navbar-brand">ASMTAX.ORG</a></div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse nav-links" id="navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">About</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
-      <!-- map -->
-      <%- include ../partials/map %>
-      <!-- footer -->
-      <%- include ../partials/footer %>
-    <!-- </div> -->
+   
+    <div style="height: 100%" ng-view></div>
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
     <script src="lib/ammap/dist/ammap/ammap.js"></script>
     <script src="lib/ammap/dist/ammap/maps/js/worldLow.js"></script>
     <script src="js/index.js"></script>

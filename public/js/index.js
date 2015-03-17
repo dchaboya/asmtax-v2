@@ -1,5 +1,23 @@
-var app = angular.module('app', ['ngResource']);
+var app = angular.module('app', ['ngResource', 'ngRoute']);
 
+app.config(function($routeProvider) {
+  $routeProvider
+
+  .when('/', {
+    templateUrl: 'views/main.html',
+    controller: 'MapCtrl'
+  })
+
+  .when('/country', {
+
+    templateUrl: 'views/country.html',
+    controller: 'CountryCtrl'
+
+  })
+
+});
+
+//SERVICES
 app.service('MapDataService', ['$http', function($http){
   
   this.promise = {};
@@ -38,6 +56,11 @@ app.controller('MapCtrl', ['$scope', function($scope) {
       "selectedColor": "#CC0000"
     }
   });
+
+}]);
+
+app.controller('CountryCtrl', ['$scope', function($scope) {
+  alert("working!!");
 
 }]);
   
