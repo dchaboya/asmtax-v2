@@ -18,7 +18,7 @@
       <a href="#/" class="country-toggle btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-th-list"></i> <span class="hidden-xs">Country Data</span></a>
       <ul class="dropdown-menu" ng-controller="MapDataCtrl">
         <li ng-repeat="country in countryNames">
-          <a href="#/">{{country.country}}</a>
+          <a href="#/country" ng-click="setCountry(country)">{{country.country}}</a>
         </li>
       </ul> 
     </div>  

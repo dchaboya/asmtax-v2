@@ -95,6 +95,35 @@ html {
 .map {
   display: table-cell;
 }
+.country-view {
+  margin-top: 50px;
+}
+.country-view hr {
+  height: 1px;
+  background-color: #dddddd;
+}
+.country-header p {
+  display: inline-block;
+  font-size: 29px;
+}
+.details > p {
+  padding-left: 10px;
+}
+.royalty > p,
+.tariff > p {
+  padding-left: 10px;
+}
+.country-view .view-sources ul {
+  padding-left: 10px;
+}
+.country-view .view-sources li {
+  list-style: none;
+}
+.country-view .view-sources li span a {
+  padding-left: 10px;
+  word-wrap: break-word;
+  font-family: Helvetica;
+}
 /* Large desktops and laptops */
 @media (max-width: 480px) {
   .footer .vertical-align .footer-logo {

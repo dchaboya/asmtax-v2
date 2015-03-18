@@ -32,12 +32,36 @@ app.service('MapDataService', ['$http', function($http){
 
 }]);
 
-app.controller('MapDataCtrl', ['$scope', 'MapDataService', function($scope, MapDataService) {
+app.service("CountryService", function() {
+
+  this.country = {};
+
+});
+
+
+app.controller('MapDataCtrl', ['$scope', 'MapDataService', 'CountryService', function($scope, MapDataService, CountryService) {
   MapDataService.initCountries();
   MapDataService.getCountries().then(function(result) {
     $scope.countryNames = result.data;
-    console.log($scope.countryNames);
   });
+
+  $scope.country = {};
+
+  $scope.setCountry = function(country) {
+    $scope.country = country;
+
+    // if($scope.country.et === undefined) {
+    //   $scope.country.et = "N/A";
+    // };
+
+    console.log("changing scope.country to: " + JSON.stringify($scope.country));
+  }; 
+
+  $scope.$watch('country', function() {
+
+    CountryService.country = $scope.country
+  });
+
 }]);
 
 app.controller('MapCtrl', ['$scope', function($scope) {
@@ -59,8 +83,10 @@ app.controller('MapCtrl', ['$scope', function($scope) {
 
 }]);
 
-app.controller('CountryCtrl', ['$scope', function($scope) {
-  alert("working!!");
+app.controller('CountryCtrl', ['$scope', 'CountryService', function($scope, CountryService) {
+
+  $scope.country = CountryService.country;
+  console.log($scope.country.source);
 
 }]);
-  
+   

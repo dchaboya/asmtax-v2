@@ -1,1 +1,43 @@
-<p>country data</p>
+<div class="country-view container">
+  <div class="panel panel-default">
+    <div class="country-header panel-heading">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-4">
+            <img ng-src="img/flags/{{country.flagImg}}"/><p>{{country.country}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="details">
+        <h3>Country Details:</h3>
+        <p>GDP: {{country.gdps | currency}} (in billions)</p>
+        <p ng-show="country.rr !== undefined">Royalty Rate: {{country.rr}}%</p>
+        <p ng-show="country.rr === undefined">Royalty Rate: Not Available</p>
+        <p ng-show="country.et !== undefined">Export Tariff: {{country.et}}%</p>
+        <p ng-show="country.et === undefined">Export Tariff: Not Available</p>
+      </div>
+      <hr/>
+      <div class="royalty">
+        <h3>Royalty Rate Description:</h3>
+        <p>{{country.dpr}}</p>
+      </div>
+      <hr/>
+      <div class="tariff">
+        <h3> Export Tariff Description:</h3>
+        <p>{{country.det}}</p>
+      </div>
+      <hr/>
+      <div class="view-sources">
+        <h3>Sources:</h3>
+        <ul>
+          <li ng-repeat="src in country.source"><span class="glyphicon glyphicon-link"><a href="{{src}}" target="_blank">{{src}}</a></span></li>
+        
+        </ul>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <a href="#/">Back To Map</a>
+  </div>
+</div>
