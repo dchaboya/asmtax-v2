@@ -14,10 +14,10 @@
         <li><a href="#/">GDP Map</a></li>
       </ul> 
     </div>
-    <div class="btn-group country-button">    
+    <div class="btn-group country-button" name="country-button">    
       <a href="#/" class="country-toggle btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-th-list"></i> <span class="hidden-xs">Country Data</span></a>
       <ul class="dropdown-menu" ng-controller="MapDataCtrl">
-        <li ng-repeat="country in countryNames">
+        <li ng-repeat="country in countryNames | orderBy: 'country'">
           <a href="#/country" ng-click="setCountry(country)">{{country.country}}</a>
         </li>
       </ul> 
